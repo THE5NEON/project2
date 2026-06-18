@@ -1,0 +1,445 @@
+.contact-page-section {
+    background-color: var(--bg);
+    padding: 80px 0;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.contact-page-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--container-gap);
+}
+
+.contact-page-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+/* =========================================
+   ЛІВА КОЛОНКА (Контакти)
+   ========================================= */
+
+.contact-page-title {
+    color: var(--text);
+    font-size: 32px;
+    font-weight: 800;
+    margin: 0 0 32px 0;
+}
+
+.contact-page-card {
+    background-color: var(--surface);
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 16px;
+    transition: box-shadow 0.2s ease;
+}
+
+.contact-page-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.contact-page-icon-wrap {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.icon-blue { background-color: #f0f7ff; color: var(--brand); }
+.icon-green { background-color: #ecfdf5; color: var(--success); }
+.icon-purple { background-color: #f5f3ff; color: #8b5cf6; }
+.icon-gold { background-color: #fffbeb; color: #d97706; }
+
+.contact-page-details {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.contact-page-label {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text);
+    margin: 0;
+}
+
+.contact-page-text {
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.5;
+    margin: 0;
+}
+
+.contact-page-requisites {
+    background-color: var(--surface);
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+}
+
+.contact-page-req-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text);
+    margin: 0 0 16px 0;
+}
+
+.contact-page-req-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.contact-page-req-row.column {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+}
+
+.contact-page-req-row:last-child {
+    margin-bottom: 0;
+}
+
+.contact-page-req-label {
+    font-size: 14px;
+    color: var(--muted);
+}
+
+.contact-page-req-value {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text);
+    word-break: break-all;
+}
+
+/* =========================================
+   ПРАВА КОЛОНКА (Форма)
+   ========================================= */
+
+.contact-page-form-card {
+    background-color: var(--surface);
+    border: 1px solid #e5e7eb;
+    border-radius: 24px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+}
+
+.contact-page-form-title {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--text);
+    margin: 0 0 8px 0;
+}
+
+.contact-page-form-desc {
+    font-size: 14px;
+    color: var(--muted);
+    margin: 0 0 32px 0;
+}
+
+.contact-page-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-page-form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.contact-page-input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.contact-page-input-group label {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.contact-page-input-group input,
+.contact-page-input-group textarea {
+    width: 100%;
+    padding: 14px 16px;
+    background-color: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 14px;
+    color: var(--text);
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.contact-page-input-group input::placeholder,
+.contact-page-input-group textarea::placeholder {
+    color: #9ca3af;
+}
+
+.contact-page-input-group input:focus,
+.contact-page-input-group textarea:focus {
+    background-color: var(--surface);
+    border-color: var(--brand);
+}
+
+.contact-page-input-group textarea {
+    resize: vertical;
+}
+
+.contact-page-submit {
+    width: 100%;
+    background-color: var(--brand);
+    color: var(--surface);
+    border: none;
+    border-radius: 8px;
+    padding: 16px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+    transition: background-color 0.2s ease;
+}
+
+.contact-page-submit:hover {
+    background-color: var(--brand-dark);
+}
+
+/* =========================================
+   СЕКЦІЯ БАНЕРА З МАПОЮ
+   ========================================= */
+.map-banner-section {
+    background-color: var(--bg);
+    padding: 40px 0;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.map-banner-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--container-gap);
+}
+
+.map-banner-card {
+    background-color: #f0f7ff; /* Світло-блакитний фон банера */
+    border-radius: 24px;
+    padding: 48px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.map-banner-icon-wrap {
+    width: 56px;
+    height: 56px;
+    background-color: #dbeafe; /* Трохи темніший блакитний для кола */
+    color: var(--brand);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.map-banner-title {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--text);
+    margin: 0 0 8px 0;
+}
+
+.map-banner-desc {
+    font-size: 15px;
+    color: var(--muted);
+    margin: 0 0 24px 0;
+}
+
+.map-banner-btn {
+    background-color: var(--brand);
+    color: var(--surface);
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 14px 28px;
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+}
+
+.map-banner-btn:hover {
+    background-color: var(--brand-dark);
+}
+
+/* =========================================
+   СЕКЦІЯ FAQ (Часті питання)
+   ========================================= */
+.faq-section {
+    background-color: var(--bg);
+    padding: 60px 0 100px 0;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.faq-container {
+    max-width: 800px; /* Робимо блок вужчим, щоб текст добре читався */
+    margin: 0 auto;
+    padding: 0 var(--container-gap);
+}
+
+.faq-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.faq-subtitle {
+    display: block;
+    color: var(--brand);
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 12px;
+}
+
+.faq-title {
+    color: var(--text);
+    font-size: 32px;
+    font-weight: 800;
+    margin: 0;
+}
+
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Стилізація елемента details */
+.faq-item {
+    background-color: var(--surface);
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    overflow: hidden; /* Щоб контент не виходив за круглі кути */
+    transition: box-shadow 0.2s ease;
+}
+
+.faq-item:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+/* Стилізація клікабельного заголовка */
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    cursor: pointer;
+    list-style: none; /* Прибирає стандартний маркер у сучасних браузерах */
+    user-select: none;
+}
+
+/* Прибирає стандартний маркер у Safari/Chrome */
+.faq-question::-webkit-details-marker {
+    display: none;
+}
+
+.faq-icon {
+    color: var(--muted);
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+    margin-left: 16px;
+}
+
+/* Обертання іконки, коли details відкритий */
+.faq-item[open] .faq-icon {
+    transform: rotate(180deg);
+}
+
+/* Блок з відповіддю */
+.faq-answer {
+    padding: 0 24px 24px 24px;
+}
+
+.faq-answer p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--muted);
+}
+
+/* =========================================
+   АДАПТИВНІСТЬ
+   ========================================= */
+@media (max-width: 576px) {
+    .map-banner-card {
+        padding: 32px 16px;
+    }
+    
+    .map-banner-title {
+        font-size: 18px;
+    }
+
+    .faq-section {
+        padding: 40px 0 80px 0;
+    }
+
+    .faq-title {
+        font-size: 28px;
+    }
+
+    .faq-question {
+        padding: 16px;
+        font-size: 15px;
+    }
+
+    .faq-answer {
+        padding: 0 16px 16px 16px;
+    }
+}
+
+/* =========================================
+   АДАПТИВНІСТЬ
+   ========================================= */
+
+@media (max-width: 992px) {
+    .contact-page-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .contact-page-section {
+        padding: 50px 0;
+    }
+
+    .contact-page-form-card {
+        padding: 24px;
+        border-radius: 16px;
+    }
+
+    .contact-page-form-row {
+        grid-template-columns: 1fr;
+    }
+}

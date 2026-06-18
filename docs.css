@@ -1,0 +1,576 @@
+
+body {
+    margin: 0;
+    color: var(--text);
+    background-color: var(--bg);
+}
+
+.reports-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--container-gap);
+}
+
+/* =========================================
+   СЕКЦІЯ 1: СТАТИСТИКА
+   ========================================= */
+.reports-stats-section {
+    background-color: var(--surface);
+    padding: 80px 0;
+}
+
+.reports-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    text-align: center;
+}
+
+.reports-stat-num {
+    font-size: 40px;
+    font-weight: 800;
+    margin-bottom: 8px;
+    line-height: 1.1;
+}
+
+.text-success { color: var(--success); }
+.text-brand { color: var(--brand); }
+.text-gold { color: var(--gold); }
+.text-danger { color: var(--danger); }
+
+.reports-stat-desc {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.5;
+    max-width: 200px;
+    margin: 0 auto;
+}
+
+/* =========================================
+   СЕКЦІЯ 2: ТАБЛИЦЯ
+   ========================================= */
+.reports-table-section {
+    background-color: var(--bg);
+    padding: 80px 0;
+}
+
+.reports-header {
+    margin-bottom: 40px;
+}
+
+.reports-subtitle {
+    display: block;
+    color: var(--brand);
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 12px;
+}
+
+.reports-title {
+    color: var(--text);
+    font-size: 36px;
+    font-weight: 800;
+    margin: 0;
+}
+
+.reports-table-wrapper {
+    background-color: var(--surface);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+}
+
+.reports-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.reports-table th {
+    background-color: var(--brand);
+    color: var(--surface);
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 20px 24px;
+}
+
+.reports-table td {
+    padding: 20px 24px;
+    border-bottom: 1px solid #f1f3f5;
+}
+
+.reports-table tr:last-child td {
+    border-bottom: none;
+}
+
+.reports-period {
+    font-weight: 600;
+    color: var(--text);
+    font-size: 15px;
+}
+
+.reports-amount {
+    color: var(--muted);
+    font-size: 15px;
+}
+
+.reports-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background-color: #ebf7ed;
+    color: var(--success);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* РОЗПОДІЛ КОШТІВ ТА ГРАНТИ */
+.fin-dist-section {
+    background-color: var(--surface);
+    padding: 80px 0 40px 0;
+}
+
+.fin-dist-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--container-gap);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.fin-dist-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+}
+
+.fin-dist-header {
+    margin-bottom: 40px;
+}
+
+.fin-dist-subtitle {
+    display: block;
+    color: var(--brand);
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 12px;
+}
+
+.fin-dist-title {
+    color: var(--text);
+    font-size: 32px;
+    font-weight: 800;
+    margin: 0;
+}
+
+.fin-dist-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.fin-dist-bar-item {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.fin-dist-bar-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fin-dist-bar-name {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--text);
+}
+
+.fin-dist-bar-percent {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.fin-dist-bar-track {
+    width: 100%;
+    height: 8px;
+    background-color: #f3f4f6;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.fin-dist-bar-fill {
+    height: 100%;
+    border-radius: 4px;
+}
+
+.fin-dist-grant-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.fin-dist-grant-card {
+    display: flex;
+    align-items: center;
+    padding: 16px 20px;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    background-color: var(--surface);
+}
+
+.fin-dist-grant-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 700;
+    margin-right: 16px;
+    flex-shrink: 0;
+}
+
+.fin-dist-grant-info {
+    flex-grow: 1;
+}
+
+.fin-dist-grant-name {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text);
+    margin: 0 0 4px 0;
+}
+
+.fin-dist-grant-year {
+    font-size: 13px;
+    color: var(--muted);
+}
+
+.fin-dist-grant-amount {
+    font-size: 15px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.color-brand { color: var(--brand); }
+.bg-brand { background-color: var(--brand); }
+.icon-brand { background-color: #f0f7ff; color: var(--brand); }
+
+.color-success { color: var(--success); }
+.bg-success { background-color: var(--success); }
+.icon-success { background-color: #ecfdf5; color: var(--success); }
+
+.color-danger { color: var(--danger); }
+.bg-danger { background-color: var(--danger); }
+.icon-danger { background-color: #fef2f2; color: var(--danger); }
+
+.color-gold { color: #d97706; } 
+.bg-gold { background-color: var(--gold); }
+.icon-gold { background-color: #fffbeb; color: #d97706; }
+
+.color-purple { color: #8b5cf6; }
+.bg-purple { background-color: #8b5cf6; }
+.icon-purple { background-color: #f5f3ff; color: #8b5cf6; }
+
+/* АУДИТОРСЬКИЙ ВИСНОВОК */
+.fin-dist-audit-section {
+    background-color: var(--bg);
+    padding: 40px 0 80px 0;
+}
+
+.fin-dist-audit-banner {
+    background-color: #f0f7ff;
+    border-radius: 16px;
+    padding: 40px;
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+}
+
+.fin-dist-audit-icon-wrap {
+    width: 64px;
+    height: 64px;
+    background-color: #dbeafe;
+    color: var(--brand);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.fin-dist-audit-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.fin-dist-audit-title {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--text);
+    margin: 0 0 12px 0;
+}
+
+.fin-dist-audit-desc {
+    font-size: 15px;
+    color: var(--muted);
+    line-height: 1.6;
+    margin: 0 0 24px 0;
+    max-width: 800px;
+}
+
+.fin-dist-audit-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.fin-dist-audit-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background-color: #dcfce7;
+    color: #16a34a;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.docs-section {
+    background-color: var(--surface, #ffffff); /* Запасний колір, якщо змінна відсутня */
+    padding: 80px 0;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.docs-container {
+    max-width: var(--max-width, 1180px);
+    margin: 0 auto;
+    padding: 0 var(--container-gap, 24px);
+}
+
+.docs-header {
+    margin-bottom: 40px;
+}
+
+.docs-subtitle {
+    display: block;
+    color: var(--brand, #0057b8);
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 12px;
+}
+
+.docs-title {
+    color: var(--text, #101828);
+    font-size: 36px;
+    font-weight: 800;
+    margin: 0;
+}
+
+.docs-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.docs-card {
+    background-color: var(--surface, #ffffff);
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.docs-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+}
+
+.docs-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.docs-icon-wrap {
+    width: 48px;
+    height: 48px;
+    background-color: #f0f7ff;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.docs-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.docs-badge {
+    color: var(--brand, #0057b8);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.docs-card-body {
+    flex-grow: 1;
+    margin-bottom: 24px;
+}
+
+.docs-card-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text, #101828);
+    margin: 0 0 8px 0;
+}
+
+.docs-card-desc {
+    font-size: 14px;
+    color: var(--muted, #6a7282);
+    margin: 0;
+    line-height: 1.5;
+}
+
+.docs-card-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #f3f4f6;
+    padding-top: 16px;
+}
+
+.docs-size {
+    font-size: 13px;
+    color: var(--muted, #6a7282);
+}
+
+.docs-download {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--brand, #0057b8);
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+.docs-download:hover {
+    opacity: 0.8;
+}
+
+/* --- АДАПТИВНІСТЬ --- */
+@media (max-width: 992px) {
+    .docs-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .docs-section {
+        padding: 50px 0;
+    }
+
+    .docs-title {
+        font-size: 28px;
+    }
+
+    .docs-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+}
+
+/* АДАПТИВНІСТЬ */
+@media (max-width: 992px) {
+    .fin-dist-grid {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+}
+
+@media (max-width: 768px) {
+    .fin-dist-section {
+        padding: 50px 0 30px 0;
+    }
+
+    .fin-dist-audit-section {
+        padding: 30px 0 50px 0;
+    }
+
+    .fin-dist-title {
+        font-size: 28px;
+    }
+
+    .fin-dist-audit-banner {
+        flex-direction: column;
+        padding: 24px;
+    }
+
+    .fin-dist-audit-icon-wrap {
+        width: 48px;
+        height: 48px;
+    }
+
+    .fin-dist-audit-title {
+        font-size: 20px;
+    }
+
+    .fin-dist-grant-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .fin-dist-grant-icon {
+        margin-right: 0;
+    }
+}
+
+/* =========================================
+   АДАПТИВНІСТЬ
+   ========================================= */
+@media (max-width: 992px) {
+    .reports-stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .reports-stats-section, 
+    .reports-table-section {
+        padding: 50px 0;
+    }
+
+    .reports-title {
+        font-size: 28px;
+    }
+
+    .reports-table-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .reports-table {
+        min-width: 650px;
+    }
+}

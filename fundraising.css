@@ -1,0 +1,501 @@
+/* Базовий контейнер секції */
+.donate-steps-wrapper {
+    background-color: #ffffff;
+    padding: 60px 20px;
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.donate-steps-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Заголовок */
+.donate-steps-heading {
+    color: #111827;
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 40px;
+    margin-top: 0;
+}
+
+/* Сітка для кроків */
+.donate-steps-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+/* Окремий блок кроку */
+.donate-steps-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Синій квадрат із цифрою */
+.donate-steps-num {
+    background-color: #0b5ed7;
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 700;
+    width: 64px;
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    margin-bottom: 16px;
+}
+
+/* Текст під цифрою */
+.donate-steps-text {
+    color: #4b5563;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.4;
+    max-width: 150px;
+}
+
+/* Базові змінні для секції */
+:root {
+    --fund-primary: #0b5ed7;
+    --fund-text-dark: #111827;
+    --fund-text-muted: #6b7280;
+    --fund-text-light: #9ca3af;
+    --fund-bg-main: #f8f9fa;
+    --fund-card-bg: #ffffff;
+    
+    /* Кольори бейджів */
+    --fund-badge-blue: #0b5ed7;
+    --fund-badge-red: #ef4444;
+    --fund-badge-purple: #8b5cf6;
+    --fund-badge-yellow: #eab308;
+    --fund-badge-green: #10b981;
+    --fund-badge-pink: #f43f5e;
+}
+
+/* Контейнер секції */
+.fund-section {
+    background-color: var(--fund-bg-main);
+    padding: 80px 20px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.fund-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Заголовок секції */
+.fund-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.fund-subtitle {
+    display: block;
+    color: var(--fund-primary);
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 12px;
+}
+
+.fund-title {
+    color: var(--fund-text-dark);
+    font-size: 36px;
+    font-weight: 800;
+    margin: 0;
+}
+
+/* Сітка карток */
+.fund-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+/* Картка */
+.fund-card {
+    background-color: var(--fund-card-bg);
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.fund-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Зображення та бейджі */
+.fund-img-wrapper {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    background-color: #e5e7eb;
+}
+
+.fund-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.fund-badges {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.fund-badge {
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 20px;
+}
+
+.badge-blue { background-color: var(--fund-badge-blue); }
+.badge-red { background-color: var(--fund-badge-red); }
+.badge-purple { background-color: var(--fund-badge-purple); }
+.badge-yellow { background-color: var(--fund-badge-yellow); color: #422006; }
+.badge-green { background-color: var(--fund-badge-green); }
+.badge-pink { background-color: var(--fund-badge-pink); }
+
+/* Контентна частина картки */
+.fund-content {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.fund-card-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--fund-text-dark);
+    margin: 0 0 12px 0;
+    line-height: 1.4;
+}
+
+.fund-card-desc {
+    font-size: 14px;
+    color: var(--fund-text-muted);
+    line-height: 1.6;
+    margin: 0 0 24px 0;
+    flex-grow: 1;
+}
+
+/* Прогрес-бар зборів */
+.fund-progress-wrap {
+    margin-bottom: 24px;
+}
+
+.fund-progress-stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.fund-current {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--fund-text-dark);
+}
+
+.fund-percent {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--fund-primary);
+}
+
+.fund-progress-bar {
+    width: 100%;
+    height: 6px;
+    background-color: #f3f4f6;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+
+.fund-progress-fill {
+    height: 100%;
+    background-color: var(--fund-primary);
+    border-radius: 4px;
+}
+
+.fund-target {
+    font-size: 12px;
+    color: var(--fund-text-light);
+}
+
+/* Кнопка "Задонатити" */
+.fund-btn {
+    width: 100%;
+    background-color: var(--fund-primary);
+    color: #ffffff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.2s ease;
+}
+
+.fund-btn:hover {
+    background-color: #094eb5;
+}
+
+/* =========================================
+   СЕКЦІЯ 1: БАНКІВСЬКІ РЕКВІЗИТИ
+   ========================================= */
+
+.bank-info-section {
+    background-color: #ffffff;
+    padding: 80px 20px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.bank-info-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Заголовок */
+.bank-info-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.bank-info-subtitle {
+    display: block;
+    color: #0b5ed7;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 12px;
+}
+
+.bank-info-title {
+    color: #111827;
+    font-size: 32px;
+    font-weight: 800;
+    margin: 0;
+}
+
+/* Картка з реквізитами */
+.bank-info-card {
+    background-color: #f0f7ff;
+    border: 1px solid #d1e3f8;
+    border-radius: 16px;
+    padding: 40px;
+}
+
+/* Сітка для коротких реквізитів */
+.bank-info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.bank-info-item, .bank-info-iban {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.bank-info-iban {
+    margin-bottom: 32px;
+}
+
+.bank-info-label {
+    font-size: 11px;
+    color: #6b7280;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.bank-info-value {
+    font-size: 16px;
+    color: #111827;
+    font-weight: 700;
+    word-break: break-all;
+}
+
+/* Зелене інформаційне повідомлення */
+.bank-info-alert {
+    background-color: #e5f7ed;
+    border: 1px solid #d1f0dd;
+    border-radius: 8px;
+    padding: 16px 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.bank-info-icon-wrap {
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.bank-info-alert-text {
+    color: #4b5563;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* =========================================
+   СЕКЦІЯ 2: МАЄТЕ ПИТАННЯ? (Call to Action)
+   ========================================= */
+
+.cta-help-section {
+    background-color: #014693;
+    padding: 80px 20px;
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.cta-help-container {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.cta-help-title {
+    color: #ffffff;
+    font-size: 36px;
+    font-weight: 800;
+    margin: 0 0 16px 0;
+}
+
+.cta-help-desc {
+    color: #e2e8f0;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0 0 32px 0;
+}
+
+/* Жовта кнопка */
+.cta-help-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: #ffd400;
+    color: #111827;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 14px 28px;
+    border-radius: 8px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.cta-help-btn:hover {
+    background-color: #e6c000;
+    transform: translateY(-2px);
+}
+
+/* =========================================
+   АДАПТИВНІСТЬ (Медіа-запити)
+   ========================================= */
+
+@media (max-width: 768px) {
+    /* Реквізити */
+    .bank-info-section {
+        padding: 50px 16px;
+    }
+    
+    .bank-info-card {
+        padding: 24px;
+    }
+
+    .bank-info-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .bank-info-title {
+        font-size: 28px;
+    }
+
+    /* Секція питань */
+    .cta-help-section {
+        padding: 60px 16px;
+    }
+
+    .cta-help-title {
+        font-size: 28px;
+    }
+}
+
+/* --- Адаптивність (Responsive) --- */
+
+/* Планшети */
+@media (max-width: 992px) {
+    .fund-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Мобільні телефони */
+@media (max-width: 768px) {
+    .fund-section {
+        padding: 50px 16px;
+    }
+    
+    .fund-title {
+        font-size: 28px;
+    }
+
+    .fund-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+/* --- Адаптивність (Responsive) --- */
+
+/* Планшети */
+@media (max-width: 768px) {
+    .donate-steps-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px 20px;
+    }
+}
+
+/* Мобільні телефони */
+@media (max-width: 480px) {
+    .donate-steps-wrapper {
+        padding: 40px 20px;
+    }
+    
+    .donate-steps-heading {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+
+    .donate-steps-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}

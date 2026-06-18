@@ -1,0 +1,1757 @@
+/* Global settings */
+:root {
+  --bg: #f8f9fa;
+  --surface: #ffffff;
+  --text: #101828;
+  --muted: #6a7282;
+  --brand: #0057b8;
+  --brand-dark: #00345a;
+  --success: #28a745;
+  --danger: #dc3545;
+  --gold: #FFD700;
+  --radius: 24px;
+  --max-width: 1180px;
+  --container-gap: 24px;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+/* ================= UTILS & RESET ================= */
+.container {
+  width: min(100%, var(--max-width));
+  margin: 0 auto;
+  padding-inline: 32px;
+}
+
+.btn-icon,
+.brand-icon-img,
+.hero-badge-icon,
+.stat-img,
+.about-img-full,
+.about-badge-img,
+.direction-card-icon,
+.project-card-img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ================= HEADER & NAV ================= */
+.site-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 20;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  padding: 24px 0;
+}
+
+.brand-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  z-index: 30;
+}
+
+.brand-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, #0057b8 0%, #003d82 100%);
+}
+
+.brand-icon-img {
+  width: 20px;
+  height: 20px;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  color: var(--surface);
+}
+
+.brand-title {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.45px;
+  color: var(--surface);
+}
+
+.brand-subtitle {
+  font-size: 12px;
+  color: var(--surface);
+}
+
+.header-menu-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 24px;
+  flex: 1;
+}
+
+.site-nav {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+}
+
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 72px;
+  padding: 10px 16px;
+  border-radius: 10px;
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: background-color 0.2s;
+}
+
+.nav-link:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.nav-link.active {
+  background: var( --brand);
+  color: var(--surface);
+}
+
+/* ================= BUTTONS ================= */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  border-radius: 16px;
+  font-weight: 700;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+  cursor: pointer;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 22px;
+  border-radius: 14px;
+  background: var(--brand);
+  color: var(--surface);
+  font-weight: 700;
+}
+
+.btn-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.btn-primary,
+.btn-donate {
+  background: linear-gradient(90deg, #ffd700 0%, #e7c300 100%);
+  color: #101828;
+  padding: 16px 24px;
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1.5px solid rgba(255, 255, 255, 0.45);
+  color: var(--surface);
+  padding: 16px 24px;
+}
+
+.btn-outline {
+  border: 2px solid var(--brand);
+  background: transparent;
+  color: var(--brand);
+  padding: 16px 24px;
+}
+
+.btn-full {
+  width: 100%;
+}
+
+.btn-text {
+  display: block;
+  font-size: 14px;
+}
+
+.btn-text-big {
+  font-size: 18px;
+}
+
+/* ================= MOBILE MENU HACK (Desktop hidden) ================= */
+.menu-checkbox {
+  display: none;
+}
+
+.burger-btn {
+  display: none;
+}
+
+/* ================= HERO ================= */
+.hero {
+  position: relative;
+  min-height: 760px;
+  padding: 120px 0 48px;
+  background-image: linear-gradient(113.5deg, rgba(0, 87, 184, 0.85) 0%, rgba(0, 30, 70, 0.75) 60%, rgba(0, 0, 0, 0.5) 100%), url('../img/photo/Image\ \(Діти\ навчаються\)-1.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  padding-top: 56px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin: 0 auto;
+  text-align: left;
+  justify-content: center;
+  max-width: 768px;
+}
+
+.hero-top {
+  display: flex;
+  font-size: 14px;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 20px;
+  border-radius: 999px;
+  background: rgba(255, 215, 0, 0.18);
+  border: 1px solid rgba(255, 215, 0, 0.4);
+  color: var(--gold);
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.hero-badge-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.hero-title {
+  max-width: 760px;
+  font-size: 60px;
+  font-weight: 900;
+  line-height: 1;
+  margin: 0;
+  margin-top: 12px;
+  letter-spacing: -0.05em;
+  color: var(--surface);
+}
+
+.hero-title-highlight {
+  color: var(--gold);
+}
+
+.hero-copy {
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 20px;
+  line-height: 1.85;
+  margin: 0;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.scroll-indicator {
+  position: absolute;
+  left: 50%;
+  bottom: 24px;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.88);
+  letter-spacing: 0.10em;
+  
+}
+
+.scroll-indicator {
+  position: absolute;
+  left: 50%;
+  bottom: 24px;
+
+  animation: scroll-bounce 2s ease-in-out infinite;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.88);
+  letter-spacing: 0.10em;
+}
+
+@keyframes scroll-bounce {
+  0%, 100% { 
+    transform: translateX(-50%) translateY(0); 
+  }
+  50% { 
+    transform: translateX(-50%) translateY(-10px); 
+  }
+}
+
+.scroll-line {
+  width: 1px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.45);
+}
+
+.scroll-text{
+  font-size: 12px;
+}
+
+/* ================= SECTIONS ================= */
+.section-heading {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.section-label {
+  display: inline-block;
+  margin-bottom: 4px;
+  color: var(--brand);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.section-title {
+  margin: 0;
+  font-size: 36px;
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+
+.section-title-highlight {
+  color: var(--brand);
+}
+
+/* ================= STATS ================= */
+.stats {
+  padding: 80px 0;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.stat-card {
+  background: var(--surface);
+  border-radius: 28px;
+  padding: 24px;
+  box-shadow: 0 22px 54px rgba(15, 23, 42, 0.08);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.stat-icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto;
+  display: grid;
+  margin-bottom: 16px;
+  place-items: center;
+  border-radius: 18px;
+}
+
+.stat-img {
+  width: 26px;
+  height: 26px;
+}
+
+.stat-icon-blue { background: rgba(0, 87, 184, 0.1); }
+.stat-icon-green { background: rgba(40, 167, 69, 0.12); }
+.stat-icon-red { background: rgba(220, 53, 69, 0.12); }
+.stat-icon-gold { background: rgba(255, 215, 0, 0.15); }
+
+.stat-card-value {
+  font-size: 30px;
+  font-weight: 900;
+  line-height: 1;
+  color: var(--brand);
+}
+
+.stat-card-text {
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.5;
+  margin-top: 2px;
+}
+
+/* ================= ABOUT ================= */
+.about {
+  padding: 72px 0;
+  background-color: var(--surface);
+}
+
+.about-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  gap: 40px;
+  align-items: center;
+}
+
+.about-media {
+  position: relative;
+}
+
+.about-stack {
+  position: relative;
+  min-height: 340px;
+}
+
+.about-image {
+  position: absolute;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 30px 70px rgba(15, 23, 42, 0.18);
+}
+
+.about-img-full,
+.about-img-offset {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-image-1 {
+  width: 248px;
+  height: 224px;
+  top: 0;
+  left: 0;
+}
+
+.about-image-2 {
+  width: 250px;
+  height: 224px;
+  top: 32px;
+  right: 20px;
+}
+
+.about-img-offset {
+  width: 250px;
+}
+
+.about-badge {
+  position: absolute;
+  left: 96px;
+  top: 168px;
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 22px;
+  border-radius: 22px;
+  background: var(--surface);
+  box-shadow: 0 28px 70px rgba(15, 23, 42, 0.12);
+}
+
+.about-badge-icon-box {
+  width: 46px;
+  height: 46px;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  background: rgba(40, 167, 69, 0.1);
+}
+
+.about-badge-img {
+  width: 22px;
+  height: 22px;
+}
+
+.about-badge-title {
+  display: block;
+  font-size: 1rem;
+  line-height: 1.2;
+  color: var(--text);
+}
+
+.about-badge-desc {
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.about-content {
+  display: grid;
+  gap: 15px;
+}
+
+.about-content-text {
+  margin: 0;
+  color: #344054;
+  font-size: 1rem;
+  line-height: 1.85;
+}
+
+.about-content-title {
+  margin: 0;
+  font-size: 36px;
+  font-weight: 900;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+}
+
+.info-accent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 32px; /* Відступ між списком та кнопкою */
+  font-family: system-ui, -apple-system, sans-serif; /* Тимчасовий шрифт, якщо немає підключеного */
+}
+
+.info-accent__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px; /* Відступ між елементами списку */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.info-accent__item {
+  display: flex;
+  align-items: center;
+  column-gap: 14px; /* Відступ між іконкою та текстом */
+}
+
+.info-accent__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1ea64d; /* $color-green */
+  flex-shrink: 0; /* Захист іконки від стискання, якщо текст буде довгим */
+}
+
+.info-accent__text {
+  font-size: 16px;
+  line-height: 1.4;
+  color: #3f444a; /* $color-text */
+  font-weight: 400;
+  margin: 0;
+}
+
+/* Стилізація кнопки всередині цього блоку */
+.info-accent__btn {
+  display: inline-flex;
+  align-items: center;
+  column-gap: 10px;
+  background-color: var(--brand); /* $color-blue */
+  color: var(--surface);
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  padding-block: 14px;
+  padding-inline: 28px;
+  border-radius: 14px; /* Округлені кути як на скріншоті */
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.info-accent__btn svg {
+  transition: transform 0.2s ease;
+}
+
+.info-accent__btn:hover {
+  background-color: var( --brand);
+}
+
+/* Легкий інтерактив: стрілка трохи зсувається вправо при ховері */
+.info-accent__btn:hover svg {
+  transform: translateX(4px);
+}
+
+.info-accent__btn:active {
+  transform: scale(0.98); /* Ефект натискання */
+}
+
+/* ================= DIRECTIONS ================= */
+.work-directions {
+  padding: 80px 0;
+}
+
+.direction-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px; /* Трохи збільшено відступ для чистоти макета */
+}
+
+.direction-card {
+  background: var(--surface);
+  border-radius: var(--radius); /* Використовуємо твої 24px з :root */
+  padding: 32px 24px;
+  box-shadow: 0 12px 32px rgba(16, 24, 40, 0.04), 0 4px 12px rgba(16, 24, 40, 0.02); /* М'яка витончена тінь */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  gap: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.direction-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(16, 24, 40, 0.08);
+}
+
+/* Контейнери для іконок з макету */
+.direction-card-icon-box {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+
+/* Окремі колірні підкладки (tints) відповідно до скріншотів */
+.icon-box--blue {
+  background-color: rgba(0, 87, 184, 0.1); /* Світло-синій */
+}
+
+.icon-box--green {
+  background-color: rgba(40, 167, 69, 0.1); /* Світло-зелений */
+}
+
+.icon-box--pink {
+  background-color: rgba(220, 53, 69, 0.08); /* Ніжно-рожевий */
+}
+
+.icon-box--yellow {
+  background-color: rgba(255, 215, 0, 0.12); /* Світло-жовтий */
+}
+
+/* Стилізація самих зображень/іконок */
+.direction-card-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.direction-card-title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.3;
+}
+
+.direction-card-text {
+  margin: 0;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.6;
+}
+/* ================= PROJECTS ================= */
+/* ================= КНОПКА ДЛЯ КАРТКИ ================= */
+.btn-brand {
+  background-color: var(--brand);
+  color: var(--surface);
+  padding: 14px 24px;
+  border-radius: 14px;
+  font-size: 15px;
+  font-weight: 700;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-brand:hover {
+  background-color: var(--brand-dark);
+  transform: translateY(-1px);
+}
+
+.btn-brand:active {
+  transform: scale(0.98);
+}
+
+.btn-brand .btn-icon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+/* ================= СЕКЦІЯ ПРОЄКТІВ ================= */
+.projects {
+  padding: 80px 0;
+  background-color: var(--surface);
+  content-visibility: auto;
+  contain-intrinsic-size: 1000px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+/* ================= КАРТКА ПРОЄКТУ ================= */
+.project-card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 12px 32px rgba(16, 24, 40, 0.04), 0 4px 12px rgba(16, 24, 40, 0.02);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(16, 24, 40, 0.08);
+}
+
+/* Обертка зображення (захист від CLS) */
+.project-card__image-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3; 
+  background-color: #eaeaea; 
+  overflow: hidden;
+}
+
+.project-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Бейджі поверх фото */
+.project-card__badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 2;
+  padding: 6px 14px;
+  border-radius: 32px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--surface);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.project-card__badge--tech { background-color: var(--brand); }
+.project-card__badge--infra { background-color: #28a745; }
+.project-card__badge--prog { background-color: #dc3545; }
+
+/* Текстовий блок */
+.project-copy {
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; 
+}
+
+.project-copy-title {
+  margin: 0 0 8px 0;
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--text);
+  line-height: 1.3;
+}
+
+.project-copy-text {
+  margin: 0 0 20px 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* ================= ПРОГРЕС ЗБОРУ ================= */
+.project-card__progress {
+  margin-top: auto; 
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.project-card__stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.project-card__raised strong {
+  color: var(--text);
+}
+
+.project-card__percentage {
+  font-weight: 700;
+  color: var(--brand);
+}
+
+.project-card__bar {
+  width: 100%;
+  height: 8px;
+  background-color: #f2f4f7;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.project-card__fill {
+  height: 100%;
+  background-color: var(--brand);
+  border-radius: 4px;
+  transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-card__goal {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* ================= АДАПТИВНІСТЬ ================= */
+@media (max-width: 1080px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+}
+
+@media (max-width: 680px) {
+  .projects {
+    padding: 56px 0;
+  }
+  
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  
+  .project-card__image-wrapper {
+    aspect-ratio: 16 / 10; 
+  }
+  
+  .project-copy {
+    padding: 24px 20px;
+  }
+}
+
+/* ================= СЕКЦІЯ ВІДГУКІВ ================= */
+.testimonials {
+  padding: 80px 0;
+  background-color: var(--bg);
+  content-visibility: auto;
+  contain-intrinsic-size: 700px;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+/* ================= КАРТКА ВІДГУКУ ================= */
+.testimonial-card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 12px 32px rgba(16, 24, 40, 0.04), 0 4px 12px rgba(16, 24, 40, 0.02);
+}
+
+/* Рейтинг зірочок */
+.testimonial-card__stars {
+  display: flex;
+  gap: 2px;
+  margin-bottom: 20px;
+  color: var(--gold);
+  font-size: 25px;
+}
+
+/* Іконка лапок */
+.testimonial-card__quote {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 16px;
+  flex-shrink: 0;
+}
+
+.testimonial-card__quote--blue { color: rgba(0, 87, 184, 0.25); }
+.testimonial-card__quote--green { color: rgba(40, 167, 69, 0.25); }
+.testimonial-card__quote--gold { color: rgba(255, 215, 0, 0.4); }
+
+/* Текст цитати */
+.testimonial-card__text {
+  margin: 0 0 32px 0;
+  color: #344054;
+  font-size: 15px;
+  line-height: 1.7;
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* Блок автора (притиснутий до низу за рахунок margin-top: auto) */
+.testimonial-card__profile {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: auto; 
+}
+
+/* Круглі аватари */
+.testimonial-card__avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: var(--surface);
+  font-weight: 700;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.testimonial-card__avatar--blue { background-color: var( --brand); }
+.testimonial-card__avatar--green { background-color: #28a745; }
+.testimonial-card__avatar--gold { background-color: #ffd700; color: #101828; }
+
+/* Метадані користувача */
+.testimonial-card__meta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.testimonial-card__name {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.2;
+}
+
+.testimonial-card__location {
+  font-size: 13px;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.testimonial-card__location-icon {
+  width: 14px;
+  height: 14px;
+  color: #94a3b8;
+  flex-shrink: 0;
+}
+
+/* ================= АДАПТИВНІСТЬ ================= */
+@media (max-width: 1080px) {
+  .testimonials-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+}
+
+@media (max-width: 760px) {
+  .testimonials {
+    padding: 60px 0;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .testimonial-card {
+    padding: 24px;
+  }
+}
+
+/* ================= БАНЕР ЗБОРУ (ОСНОВА) ================= */
+.donate-banner {
+  position: relative;
+  background: radial-gradient(circle at 50% 50%, #0052b4 0%, #003a8c 100%);
+  padding: 96px 0;
+  overflow: hidden;
+  color: var(--surface);
+}
+
+.donate-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  gap: 24px;
+  z-index: 2; /* Щоб контент був поверх ліній фону */
+}
+
+/* ================= ДЕКОРАТИВНІ КОЛА НА ТЛІ ================= */
+.donate-banner-circle {
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.donate-banner-circle--top-right {
+  width: 440px;
+  height: 440px;
+  top: -160px;
+  right: -120px;
+}
+
+.donate-banner-circle--bottom-left {
+  width: 320px;
+  height: 320px;
+  bottom: -140px;
+  left: -80px;
+}
+
+/* ================= ВЕРХНІЙ БЕЙДЖ ================= */
+.donate-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 204, 0, 0.3);
+  padding: 6px 16px;
+  border-radius: 30px;
+  margin-bottom: 28px;
+}
+
+.donate-badge-icon {
+  width: 16px;
+  height: 16px;
+  color: #ffcc00;
+}
+
+.donate-badge-text {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #ffcc00;
+}
+
+/* ================= ТЕКСТОВИЙ БЛОК ================= */
+.donate-title {
+  font-size: 44px;
+  font-weight: 800;
+  line-height: 1.25;
+  margin: 0 0 18px 0;
+  letter-spacing: -0.5px;
+}
+
+.donate-title-highlight {
+  color: #ffcc00; /* Фірмовий жовтий колір з макета */
+}
+
+.donate-text {
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 580px;
+  margin: 0 0 36px 0;
+}
+
+/* ================= КНОПКИ ТА ДІЇ ================= */
+.donate-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+/* Жовта головна кнопка */
+.btn-donate-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: #ffcc00;
+  color: #0b132a;
+  padding: 16px 28px;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(255, 204, 0, 0.25);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-donate-primary:hover {
+  background-color: #e6b800;
+  transform: translateY(-1px);
+}
+
+/* Контурна прозора кнопка */
+.btn-donate-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: transparent;
+  color: var(--surface);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 15px 28px; /* Менше на 1px через наявність border */
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.btn-donate-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: var(--surface);
+}
+
+/* Спільні стилі для іконок всередині кнопок */
+.btn-donate-icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.btn-donate-text {
+  line-height: 1;
+}
+
+/* ================= АДАПТИВНІСТЬ ================= */
+@media (max-width: 768px) {
+  .donate-banner {
+    padding: 64px 0;
+  }
+
+  .donate-title {
+    font-size: 32px;
+  }
+
+  .donate-actions {
+    flex-direction: column;
+    width: 100%;
+    max-width: 320px;
+    gap: 12px;
+  }
+
+  .btn-donate-primary,
+  .btn-donate-secondary {
+    width: 100%;
+  }
+}
+
+/* ==========================================================================
+   DARK FOOTER STYLES (ОСНОВНІ СТИЛІ)
+   ========================================================================== */
+
+.site-footer-dark {
+  background-color: #212529; /* Глибокий темно-синій колір з макета */
+  color: #94a3b8;
+  padding: 80px 0 24px;
+  font-family: 'Inter', sans-serif;
+}
+
+.footer-dark-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr; /* Перша колонка ширша */
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+/* --- Колонка бренду та логотипу --- */
+.footer-dark-brand-col {
+  padding-right: 40px;
+}
+
+.footer-brand-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  margin-bottom: 24px;
+}
+
+.footer-brand-icon {
+  width: 40px;
+  height: 40px;
+  background-color: var( --brand);;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.footer-brand-img {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(1); 
+}
+
+.footer-brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-brand-title {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--gold);
+  line-height: 1.1;
+}
+
+.footer-brand-subtitle {
+  font-size: 12px;
+  font-weight: 500;
+  color: #60a5fa;
+  letter-spacing: 1px;
+}
+
+.footer-dark-desc {
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0 0 32px 0;
+  color: #94a3b8;
+}
+
+/* --- Соціальні мережі --- */
+.footer-dark-socials {
+  display: flex;
+  gap: 16px;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.social-link:hover {
+  background-color: var( --brand);
+  transform: translateY(-3px);
+}
+
+.social-icon {
+  width: 20px;
+  height: 20px;
+  filter: brightness(0) invert(1);
+}
+
+/* --- Навігаційні колонки та контакти --- */
+.footer-dark-col {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer-dark-heading {
+  color: #d1d5dc;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin: 0;
+}
+
+.footer-dark-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer-dark-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-dark-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.footer-dark-text {
+  font-size: 15px;
+  color: #98a2b3;
+  line-height: 1.5;
+}
+
+.footer-dark-link {
+  color: #99a1af;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 1.5;
+  transition: color 0.3s ease;
+}
+
+.footer-dark-link:hover {
+  color: var(--surface);
+}
+
+/* --- Картка IBAN з макета --- */
+.footer-dark-iban-card {
+  margin-top: 8px;
+  background-color: rgba(70, 82, 95, 0.2);; 
+  border-radius: 14px;      
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-width: 340px;         
+}
+
+.footer-dark-iban-label {
+  font-size: 13px;
+  color: #667085;           
+  font-weight: 500;
+}
+
+.footer-dark-iban-value {
+  font-size: 14px;
+  color: #eaecf0;           
+  font-weight: 600;
+  font-family: monospace;
+  letter-spacing: 0.3px;
+}
+
+/* --- Нижня лінія футера --- */
+.footer-dark-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  gap: 20px;
+}
+
+.footer-dark-copy {
+  margin: 0;
+  font-size: 13px;
+  color: #6a7282;
+  line-height: 1.5;
+}
+
+.footer-made-with-love {
+  display: flex;
+  align-items: center;
+  gap: 6px;                      
+}
+
+.heart-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-heart-img {
+  width: 16px;
+  height: 16px;
+  display: block;
+}
+
+
+/* ==========================================================================
+   MEDIA QUERIES (АДАПТИВНІСТЬ ЗА СПАДАННЯМ БРЕКПОІНТІВ)
+   ========================================================================== */
+
+/* --- Брекпоінт 1121px (Планшети та Мобільне меню) --- */
+@media (max-width: 1121px) {
+  .burger-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 26px;
+    height: 18px;
+    cursor: pointer;
+    z-index: 30;
+  }
+
+  .burger-line {
+    width: 100%;
+    height: 2px;
+    background-color: #ffffff;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+
+  .header-menu-wrapper {
+    position: absolute;
+    top: 100%; 
+    left: 50%;
+    transform: translateX(-50%) translateY(-10px);
+    width: calc(100% - 48px);
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: all 0.3s ease;
+  }
+
+  .menu-checkbox:checked ~ .header-menu-wrapper {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(-50%) translateY(0);
+  }
+
+  .menu-checkbox:checked ~ .burger-btn .burger-line:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  
+  .menu-checkbox:checked ~ .burger-btn .burger-line:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .menu-checkbox:checked ~ .burger-btn .burger-line:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .site-nav {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .nav-link {
+    justify-content: flex-start;
+    color: #101828; 
+    padding: 12px 16px;
+    font-size: 15px;
+  }
+
+  .nav-link:hover {
+    background: rgba(0, 87, 184, 0.05);
+  }
+
+  .btn-header {
+    width: 100%;
+    justify-content: center;
+    margin-top: 8px;
+    padding: 14px 22px;
+  }
+
+  .hero-content {
+    text-align: center;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .hero-top {
+    justify-content: center;
+  }
+}
+
+/* --- Брекпоінт 1080px (Горизонтальні планшети) --- */
+@media (max-width: 1080px) {
+  .footer-dark-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 48px 32px;
+  }
+  
+  .footer-dark-brand-col {
+    grid-column: span 2;
+    padding-right: 0;
+    max-width: 500px;
+  }
+
+  .stats-grid,
+  .direction-grid,
+  .projects-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .about-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .about-stack {
+    min-height: 300px;
+    max-width: 550px;
+    margin-inline: auto;
+  }
+
+  .hero-title {
+    font-size: clamp(2.6rem, 5vw, 3.8rem);
+  }
+
+  .donate-layout {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .donate-actions {
+    justify-content: center;
+  }
+}
+
+/* --- Брекпоінт 760px (Вертикальні планшети / Смартфони) --- */
+@media (max-width: 760px) {
+  .site-footer-dark {
+    padding: 60px 0 24px;
+  }
+
+  .footer-dark-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .footer-dark-brand-col {
+    grid-column: span 1;
+  }
+
+  .footer-dark-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+  }
+  
+  .footer-made-with-love {
+    justify-content: center;
+  }
+
+  .header-inner {
+    flex-direction: row; 
+  }
+
+  .hero {
+    min-height: 660px;
+  }
+
+  .hero-content {
+    padding-block: 110px;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 16px;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 384px;
+  }
+
+  .about-stack {
+    position: relative;
+    display: block; 
+    width: 100%;
+    max-width: 440px; 
+    height: 300px; 
+    margin: 0 auto;
+  }
+
+  .about-image {
+    position: absolute;
+    border-radius: 24px; 
+  }
+
+  .about-image-1 {
+    width: 220px;
+    height: 200px;
+    top: 0;
+    left: -15px;
+  }
+
+  .about-image-2 {
+    width: 222px;
+    height: 200px;
+    top: 32px;
+    right: -15px; 
+  }
+
+  .about-img-offset {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .about-badge {
+    position: absolute;
+    left: 50%;
+    top: 180px;
+    transform: translateX(-50%); 
+    margin: 0;
+    padding: 12px 18px;
+    box-shadow: 0 15px 40px rgba(15, 23, 42, 0.15);
+  }
+
+  .projects-grid,
+  .direction-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .hero-title {
+    font-size: clamp(2.2rem, 7vw, 3rem);
+  }
+}
+
+/* --- Брекпоінт 520px (Мобільні пристрої) --- */
+@media (max-width: 520px) {
+  .hero {
+    min-height: 620px;
+  }
+
+  .section-title, 
+  .about-content-title {
+    font-size: 30px;
+    font-weight: 900;
+  }
+
+  .section-heading {
+    margin-bottom: 30px;
+  }
+
+  .stat-card-value {
+    font-size: 24px;
+  }
+
+  .btn,
+  .btn-donate,
+  .btn-outline {
+    width: 100%;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .about-stack {
+    max-width: 320px; 
+    height: 240px;    
+  }
+
+  .about-image-1 {
+    width: 165px;
+    height: 150px;
+  }
+
+  .about-image-2 {
+    width: 167px;
+    height: 150px;
+    top: 24px;
+    right: -15px;
+  }
+
+  .about-badge {
+    top: 140px;
+    padding: 10px 14px;
+    border-radius: 16px;
+  }
+
+  .about-badge-icon-box {
+    width: 36px;
+    height: 36px;
+    border-radius: 12px;
+  }
+
+  .about-badge-img {
+    width: 18px;
+    height: 18px;
+  }
+
+  .about-badge-title {
+    font-size: 14px;
+  }
+
+  .about-badge-desc {
+    font-size: 12px;
+  }
+
+  .donate-layout {
+    gap: 16px;
+  }
+
+  .footer-inner {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 24px 0;
+  }
+}
+
+/* --- Брекпоінт 480px (Вузькі екрани) --- */
+@media (max-width: 480px) {
+  .brand-subtitle {
+    display: none;
+  }
+  
+  .header-menu-wrapper {
+    width: calc(100% - 32px); 
+  }
+
+  .footer-dark-iban-card {
+    max-width: 100%; /* Картка IBAN стає гумовою на мікро-дисплеях */
+  }
+}

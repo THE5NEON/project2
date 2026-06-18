@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Про нас — Навчаємо</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/about.css" />
+  <link rel="stylesheet" href="css/news.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="brand-link">
+          <span class="brand-icon">
+            <img class="brand-icon-img" src="img/icon/Book-logo.svg" alt="Навчаємо" />
+          </span>
+          <span class="brand-text">
+            <span class="brand-title">Навчаємо</span>
+            <span class="brand-subtitle">TeachUA</span>
+          </span>
+        </a>
+        <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+      
+        <label for="menu-toggle" class="burger-btn" aria-label="Меню">
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+        </label>
+        <div class="header-menu-wrapper">
+          <nav class="site-nav">
+            <a href="index.html" class="nav-link">Головна</a>
+            <a href="about.html" class="nav-link ">Про нас</a>
+            <a href="projects.html" class="nav-link">Проєкти</a>
+            <a href="donations.html" class="nav-link">Збори</a>
+            <a href="news.html" class="nav-link active">Новини</a>
+            <a href="docs.html" class="nav-link">Документація</a>
+            <a href="contacts.html" class="nav-link">Контакти</a>
+          </nav>
+          <a class="btn btn-header" href="donations.html">
+            <img class="btn-icon" src="img/icon/header-heart.svg" alt="" />
+            <span class="btn-text">Допомогти зараз</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-overlay"></div>
+        <div class="container">
+          <div class="hero-content-second">
+            <div class="hero-top">
+              <div class="hero-badge">
+                <span class="hero-badge-text">Новини</span>
+              </div>
+            </div>
+            <h1 class="hero-title">Будьте у курсі <br><span class="hero-title-highlight">наших подій</span></h1>
+            <p class="hero-copy-second">Найактуальніші новини, історії успіху та звіти про нашу діяльність.</p>
+          </div>
+        </div>
+
+        <div class="scroll-indicator">
+        <span class="scroll-text">Гортай</span>
+        <span class="scroll-line"></span>
+      </div>
+    </section>
+
+    <section class="news-page-section">
+        <div class="news-page-container">
+
+            <div class="news-page-filters">
+                <button class="news-page-filter active">Всі</button>
+                <button class="news-page-filter">Новини</button>
+                <button class="news-page-filter">Історії успіху</button>
+                <button class="news-page-filter">Події</button>
+                <button class="news-page-filter">Гранти</button>
+                <button class="news-page-filter">Волонтерство</button>
+            </div>
+
+            <div class="news-page-block">
+                <h2 class="news-page-section-title">ГОЛОВНА НОВИНА</h2>
+                
+                <div class="news-page-grid-2">
+                    <article class="news-page-card">
+                        <div class="news-page-img-wrap main-img">
+                            <img src="/img/photo/about-us-2.jpg" alt="Освітній центр" class="news-page-img">
+                        </div>
+                        <div class="news-page-card-content">
+                            <div class="news-page-date">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                                5 червня 2026
+                            </div>
+                            <h3 class="news-page-title main-title">Відкрито освітній центр у Дніпрі</h3>
+                            <p class="news-page-excerpt">
+                                Новий центр зможе приймати понад 300 дітей щомісяця. Це результат тримісячної роботи нашої команди та підтримки міжнародних партнерів.
+                            </p>
+                            <a href="#" class="news-page-link">
+                                Читати далі
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="news-page-card">
+                        <div class="news-page-img-wrap main-img">
+                            <img src="/img/photo/hero.jpg" alt="Грант" class="news-page-img">
+                        </div>
+                        <div class="news-page-card-content">
+                            <div class="news-page-date">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                                26 травня 2026
+                            </div>
+                            <h3 class="news-page-title main-title">Отримано грант від міжнародних партнерів</h3>
+                            <p class="news-page-excerpt">
+                                Організація «Навчаємо» отримала грант у розмірі 3,5 млн грн від фонду Education Cannot Wait для розширення освітніх програм.
+                            </p>
+                            <a href="#" class="news-page-link">
+                                Читати далі
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <div class="news-page-block">
+                <h2 class="news-page-section-title">ВСІ НОВИНИ</h2>
+                
+                <div class="news-page-grid-3">
+                    
+                    <article class="news-page-card">
+                        <div class="news-page-img-wrap">
+                            <img src="/img/photo/Image (Ноутбуки для дітей Харківщини).png" alt="Новина 1" class="news-page-img">
+                        </div>
+                        <div class="news-page-card-content">
+                            <div class="news-page-date">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                                3 червня 2026
+                            </div>
+                            <h3 class="news-page-title">200 дітей завершили курси програмування</h3>
+                            <a href="#" class="news-page-link">Читати <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+                        </div>
+                    </article>
+
+                    <article class="news-page-card">
+                        <div class="news-page-img-wrap">
+                            <img src="/img/photo/Image (Марина вступила до університету завдяки нашій підтримці).png" alt="Новина 2" class="news-page-img">
+                        </div>
+                        <div class="news-page-card-content">
+                            <div class="news-page-date">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                                22 травня 2026
+                            </div>
+                            <h3 class="news-page-title">Тарас розпочав навчання у школі завдяки нашій підтримці</h3>
+                            <a href="#" class="news-page-link">Читати <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+                        </div>
+                    </article>
+
+                    <article class="news-page-card">
+                        <div class="news-page-img-wrap">
+                            <img src="/img/photo/Image (Освітній центр у Дніпрі).png" alt="Новина 3" class="news-page-img">
+                        </div>
+                        <div class="news-page-card-content">
+                            <div class="news-page-date">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                                20 травня 2026
+                            </div>
+                            <h3 class="news-page-title">Проведено форум освітніх можливостей</h3>
+                            <a href="#" class="news-page-link">Читати <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+                        </div>
+                    </article>
+
+                    <article class="news-page-card">
+                        <div class="news-page-img-wrap">
+                            <img src="/img/photo/about-2.jpg" alt="Новина 4" class="news-page-img">
+                        </div>
+                        <div class="news-page-card-content">
+                            <div class="news-page-date">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                                18 травня 2026
+                            </div>
+                            <h3 class="news-page-title">Запуск літнього освітнього табору 2026</h3>
+                            <a href="#" class="news-page-link">Читати <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+                        </div>
+                    </article>
+
+                    <article class="news-page-card">
+                        <div class="news-page-img-wrap">
+                            <img src="/img/photo/Image (Ноутбуки для дітей Харківщини).png" alt="Новина 5" class="news-page-img">
+                        </div>
+                        <div class="news-page-card-content">
+                            <div class="news-page-date">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                                12 травня 2026
+                            </div>
+                            <h3 class="news-page-title">500 ноутбуків передано школярам Харківщини</h3>
+                            <a href="#" class="news-page-link">Читати <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+                        </div>
+                    </article>
+
+                    <article class="news-page-card">
+                        <div class="news-page-img-wrap">
+                            <img src="/img/photo/hero.jpg" alt="Новина 6" class="news-page-img">
+                        </div>
+                        <div class="news-page-card-content">
+                            <div class="news-page-date">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                                8 травня 2026
+                            </div>
+                            <h3 class="news-page-title">Набір волонтерів на літній сезон</h3>
+                            <a href="#" class="news-page-link">Читати <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+                        </div>
+                    </article>
+
+                    <article class="news-page-card">
+                        <div class="news-page-img-wrap">
+                            <img src="/img/photo/Image (Бібліотека майбутнього) (1).png" alt="Хлопчик за ноутбуком" class="news-page-img">
+                        </div>
+                        <div class="news-page-card-content">
+                            <div class="news-page-date">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                                2 травня 2026
+                            </div>
+                            <h3 class="news-page-title">Дмитро з Херсона: «Я написав свій перший вебсайт»</h3>
+                            <a href="#" class="news-page-link">Читати <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+                        </div>
+                    </article>
+
+                    <article class="news-page-card">
+                        <div class="news-page-img-wrap">
+                            <img src="/img/photo/about-1.jpg" alt="Діти у школі" class="news-page-img">
+                        </div>
+                        <div class="news-page-card-content">
+                            <div class="news-page-date">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                                28 квітня 2026
+                            </div>
+                            <h3 class="news-page-title">UNICEF підтримає розвиток STEM-освіти</h3>
+                            <a href="#" class="news-page-link">Читати <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+                        </div>
+                    </article>
+
+                    <article class="news-page-card">
+                        <div class="news-page-img-wrap">
+                            <img src="/img/photo/Image (Бібліотека майбутнього).png" alt="Хлопчик читає книгу" class="news-page-img">
+                        </div>
+                        <div class="news-page-card-content">
+                            <div class="news-page-date">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                                20 квітня 2026
+                            </div>
+                            <h3 class="news-page-title">Нова бібліотека для сільської школи на Миколаївщині</h3>
+                            <a href="#" class="news-page-link">Читати <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+                        </div>
+                    </article>
+
+                    <article class="news-page-card">
+                        <div class="news-page-img-wrap">
+                            <img src="/img/photo/about-us-2.jpg" alt="Діти за партами" class="news-page-img">
+                        </div>
+                        <div class="news-page-card-content">
+                            <div class="news-page-date">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                                15 квітня 2026
+                            </div>
+                            <h3 class="news-page-title">Профорієнтаційний день у Запоріжжі</h3>
+                            <a href="#" class="news-page-link">Читати <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="subscribe-block-section">
+        <div class="subscribe-block-container">
+            
+            <div class="subscribe-block-icon-top">
+                <img src="/img/icon/Icon (26).png" alt="Іконка сповіщення" class="subscribe-block-img-icon">
+            </div>
+
+            <h2 class="subscribe-block-title">Підпишіться на новини</h2>
+            <p class="subscribe-block-desc">
+                Отримуйте щомісячний звіт про результати нашої роботи та найважливіші новини.
+            </p>
+
+            <form class="subscribe-block-form" action="#" method="POST">
+                <input type="email" class="subscribe-block-input" placeholder="Ваш email" required>
+                
+                <button type="reset" class="subscribe-block-btn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                    Підписатися
+                </button>
+            </form>
+
+        </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer-dark">
+  <div class="container footer-dark-inner">
+    
+    <div class="footer-dark-grid">
+      
+      <div class="footer-dark-col footer-dark-brand-col">
+        <a href="index.html" class="footer-brand-link">
+          <span class="footer-brand-icon">
+            <img class="footer-brand-img" src="img/icon/Book-logo.svg" alt="Навчаємо" />
+          </span>
+          <span class="footer-brand-text">
+            <span class="footer-brand-title">Навчаємо</span>
+            <span class="footer-brand-subtitle">TeachUA</span>
+          </span>
+        </a>
+        <p class="footer-dark-desc">
+          Якісна освіта для кожної дитини в Україні. Ми разом будуємо майбутнє.
+        </p>
+        <div class="footer-dark-socials">
+          <a href="#" class="social-link" aria-label="Facebook">
+            <img class="social-icon" src="img/icon/Icon (5).png" alt="Facebook" />
+          </a>
+          <a href="#" class="social-link" aria-label="Instagram">
+            <img class="social-icon" src="img/icon/Icon (6).png" alt="Instagram" />
+          </a>
+          <a href="#" class="social-link" aria-label="YouTube">
+            <img class="social-icon" src="img/icon/Icon (7).png" alt="YouTube" />
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-dark-col">
+        <h3 class="footer-dark-heading">Навігація</h3>
+        <ul class="footer-dark-list">
+          <li class="footer-dark-item"><a href="about.html" class="footer-dark-link">Про нас</a></li>
+          <li class="footer-dark-item"><a href="projects.html" class="footer-dark-link">Наші проєкти</a></li>
+          <li class="footer-dark-item"><a href="donations.html" class="footer-dark-link">Збори</a></li>
+          <li class="footer-dark-item"><a href="news.html" class="footer-dark-link">Новини</a></li>
+          <li class="footer-dark-item"><a href="docs.html" class="footer-dark-link">Документація</a></li>
+          <li class="footer-dark-item"><a href="contacts.html" class="footer-dark-link">Контакти</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-dark-col">
+        <h3 class="footer-dark-heading">Програми</h3>
+        <ul class="footer-dark-list">
+          <li class="footer-dark-item"><a href="#" class="footer-dark-link">Освіта без кордонів</a></li>
+          <li class="footer-dark-item"><a href="#" class="footer-dark-link">Шкільний ноутбук</a></li>
+          <li class="footer-dark-item"><a href="#" class="footer-dark-link">Англійська для майбутнього</a></li>
+          <li class="footer-dark-item"><a href="#" class="footer-dark-link">Digital Skills</a></li>
+          <li class="footer-dark-item"><a href="#" class="footer-dark-link">STEM Academy</a></li>
+          <li class="footer-dark-item"><a href="#" class="footer-dark-link">Підготовка до НМТ</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-dark-col">
+        <h3 class="footer-dark-heading">Контакти</h3>
+        <ul class="footer-dark-list">
+          <li class="footer-dark-item">
+            <img src="img/icon/Icon (margin).png" alt="Map" class="footer-dark-icon"> 
+            <span class="footer-dark-text">Київ, вул. Хрещатик, 22</span>
+          </li>
+          
+          <li class="footer-dark-item">
+            <img src="img/icon/Icon (8).png" alt="Phone" class="footer-dark-icon"> 
+            <a href="tel:+380441234567" class="footer-dark-link">+380 44 123 45 67</a>
+          </li>
+          
+          <li class="footer-dark-item">
+            <img src="img/icon/Icon (9).png" alt="Mail" class="footer-dark-icon"> 
+            <a href="mailto:info@navchaiemo.org.ua" class="footer-dark-link">info@navchaiemo.org.ua</a>
+          </li>
+          
+          <li class="footer-dark-iban-card">
+            <span class="footer-dark-iban-label">IBAN для донатів:</span>
+            <span class="footer-dark-iban-value">UA123456789012345678901234567</span>
+          </li>
+        </ul>
+      </div>
+
+    </div> <div class="footer-dark-bottom">
+      <p class="footer-dark-copy">
+        &copy; 2026 БО «Навчаємо» ЄДРПОУ 12345678 Всі права захищені
+      </p>
+      <p class="footer-dark-copy footer-made-with-love">
+        Зроблено з 
+        <span class="heart-icon">
+          <img src="img/icon/Icon-heart.svg" alt="серце" class="footer-heart-img">
+        </span> 
+        для дітей України
+      </p>
+    </div>
+
+  </div>
+  </footer>
+</body>
+</html>

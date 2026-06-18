@@ -1,0 +1,415 @@
+/* Stats Section (Статистика) */
+.about-stats {
+    background: #ffffff; 
+    padding: 40px 0;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 24px;
+    text-align: center;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.stat-number {
+    font-size: 24px;
+    font-weight: 800;
+    color: #0057b8;
+    line-height: 1.2;
+    margin: 0;
+    letter-spacing: -0.01em;
+}
+
+.stat-label {
+    font-size: 14px;
+    color: #667085;
+    line-height: 1.4;
+    font-weight: 400;
+    margin: 0;
+}
+
+/* Базові налаштування кольорів */
+:root {
+    --bg-color: #f8f9fa;
+    --card-bg: #ffffff;
+    --text-main: #2b2b2b;
+    --text-muted: #6A7282;
+    --text-light: #9ca3af;
+    --border-color: #f3f4f6;
+    
+    --theme-blue: #0057B8;
+    --theme-green: #28A745;
+    --theme-purple: #6F42C1;
+    --theme-yellow: #FFD700;
+    --theme-red: #DC3545;
+    
+    --badge-active-bg: #ecfdf5;
+    --badge-active-text: #28A745;
+    --badge-seasonal-bg: #fef3c7;
+    --badge-seasonal-text: #FFD700;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.5;
+}
+
+/* Контейнер та оптимізована сітка */
+.programs-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 96px 20px;
+}
+
+.programs-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+/* Стилі картки */
+.program-card {
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    border-top: 6px solid transparent;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Ефект наведення */
+.program-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+/* Тематичні класи для карток */
+.theme-blue { border-top-color: var(--theme-blue); }
+.theme-blue .icon-wrap { background-color: #eff6ff; }
+
+.theme-green { border-top-color: var(--theme-green); }
+.theme-green .icon-wrap { background-color: #ecfdf5; }
+
+.theme-purple { border-top-color: var(--theme-purple); }
+.theme-purple .icon-wrap { background-color: #f5f3ff; }
+
+.theme-yellow { border-top-color: var(--theme-yellow); }
+.theme-yellow .icon-wrap { background-color: #fffbeb; }
+
+.theme-red { border-top-color: var(--theme-red); }
+.theme-red .icon-wrap { background-color: #fef2f2; }
+
+/* Шапка картки */
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.icon-wrap {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Іконки всередині .icon-wrap */
+.card-icon {
+    width: 20px; 
+    height: 20px;
+    object-fit: contain;
+}
+
+/* Бейджі статусу */
+.badge {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.badge.active {
+    background-color: var(--badge-active-bg);
+    color: var(--badge-active-text);
+}
+
+.badge.seasonal {
+    background-color: var(--badge-seasonal-bg);
+    color: var(--badge-seasonal-text);
+}
+
+/* Тіло картки */
+.card-body {
+    flex-grow: 1;
+    margin-bottom: 24px;
+}
+
+.category {
+    font-size: 11px;
+    text-transform: uppercase;
+    color: var(--text-light);
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.description {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* Футер картки */
+.card-footer {
+    border-top: 1px solid var(--border-color);
+    padding-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.card-footer-text {
+    font-size: 13px;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.card-footer-value {
+    color: var(--text-main);
+    font-weight: 700;
+}
+
+.card-footer-item {
+    display: flex;
+    gap : 8px;
+}
+
+.card-footer-icon {
+    width: 14px;
+    height: 14px;
+    object-fit: contain;
+}
+
+.stat-item {
+    font-size: 13px;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.stat-item strong {
+    color: var(--text-main);
+    font-weight: 600;
+}
+
+.stat-icon {
+    width: 14px;
+    height: 14px;
+    object-fit: contain;
+    opacity: 0.6;
+}
+
+/* Змінні секції */
+:root {
+    --process-blue: #0b5ed7;
+    --process-dark: #111827;
+    --process-text: #6b7280;
+}
+
+/* Скидання базових відступів */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Головний контейнер секції */
+.process-section {
+    background-color: #ffffff;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.process-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Стилі для шапки секції */
+.process-header {
+    margin-bottom: 60px;
+}
+
+.process-subtitle {
+    display: block;
+    color: var(--process-blue);
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 12px;
+}
+
+.process-title {
+    color: var(--process-dark);
+    font-size: 36px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+/* Сітка для карток */
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+/* Стилі окремого кроку */
+.process-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.step-number {
+    background-color: var(--theme-blue);
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 700;
+    width: 64px;
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 10px rgba(11, 94, 215, 0.2);
+}
+
+.step-title {
+    color: var(--process-dark);
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.step-desc {
+    color: var(--process-text);
+    font-size: 14px;
+    line-height: 1.6;
+    max-width: 250px;
+}
+
+/* --- Адаптивність (Responsive) --- */
+
+/* Для планшетів */
+@media (max-width: 992px) {
+    .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px 20px;
+    }
+}
+
+/* Для мобільних телефонів */
+@media (max-width: 576px) {
+    .process-section {
+        padding: 50px 20px;
+    }
+    
+    .process-title {
+        font-size: 28px;
+    }
+
+    .process-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .step-desc {
+        max-width: 100%;
+    }
+}
+
+/* --- Адаптивність (Responsive) --- */
+
+/* Планшети */
+@media (max-width: 992px) {
+    .programs-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Мобільні телефони */
+@media (max-width: 768px) {
+    .programs-section {
+        padding: 24px 16px;
+    }
+    .programs-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    .program-card {
+        padding: 20px;
+    }
+}
+
+/* ==========================================================================
+   Мобільна адаптація для статистики
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  .about-stats {
+    padding: 40px 0;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px 16px;
+  }
+
+  .stat-number {
+    font-size: 32px;
+    margin-bottom: 4px;
+  }
+
+  .stat-label {
+    font-size: 13px;
+    max-width: 140px;
+    margin: 0 auto;
+  }
+}

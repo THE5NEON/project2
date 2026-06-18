@@ -1,0 +1,336 @@
+/* =========================================
+   БАЗОВІ ЗМІННІ
+   ========================================= */
+:root {
+    --news-primary: #0b5ed7;
+    --news-text-dark: #111827;
+    --news-text-muted: #6b7280;
+    --news-bg-main: #f8f9fa;
+    --news-bg-card: #ffffff;
+    --news-border: #e5e7eb;
+}
+
+.news-page-section {
+    background-color: var(--news-bg-main);
+    padding: 60px 20px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.news-page-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* =========================================
+   ФІЛЬТРИ (ТАБИ)
+   ========================================= */
+.news-page-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 50px;
+}
+
+.news-page-filter {
+    background-color: #ffffff;
+    color: var(--news-text-dark);
+    border: 1px solid var(--news-border);
+    padding: 10px 24px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.news-page-filter:hover {
+    border-color: #d1d5db;
+    background-color: #f3f4f6;
+}
+
+.news-page-filter.active {
+    background-color: var(--news-primary);
+    color: #ffffff;
+    border-color: var(--news-primary);
+}
+
+/* =========================================
+   ЗАГОЛОВКИ СЕКЦІЙ
+   ========================================= */
+.news-page-block {
+    margin-bottom: 60px;
+}
+
+.news-page-section-title {
+    color: var(--news-primary);
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 24px;
+}
+
+/* =========================================
+   СІТКИ ДЛЯ КАРТОК
+   ========================================= */
+.news-page-grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.news-page-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+/* =========================================
+   КАРТКИ НОВИН
+   ========================================= */
+.news-page-card {
+    background-color: var(--news-bg-card);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.news-page-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.news-page-img-wrap {
+    width: 100%;
+    height: 180px;
+    background-color: #e5e7eb;
+    position: relative;
+    overflow: hidden;
+}
+
+.news-page-img-wrap.main-img {
+    height: 240px;
+}
+
+.news-page-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.news-page-card-content {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.news-page-date {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: var(--news-text-muted);
+    margin-bottom: 12px;
+}
+
+.news-page-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--news-text-dark);
+    line-height: 1.4;
+    margin: 0 0 16px 0;
+    flex-grow: 1;
+}
+
+.news-page-title.main-title {
+    font-size: 20px;
+    margin-bottom: 12px;
+    flex-grow: 0;
+}
+
+.news-page-excerpt {
+    font-size: 14px;
+    color: var(--news-text-muted);
+    line-height: 1.6;
+    margin: 0 0 20px 0;
+    flex-grow: 1;
+}
+
+.news-page-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--news-primary);
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+.news-page-link:hover {
+    opacity: 0.8;
+}
+
+/* =========================================
+   СЕКЦІЯ ПІДПИСКИ
+   ========================================= */
+
+.subscribe-block-section {
+    background-color: #ffffff;
+    padding: 80px 20px;
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.subscribe-block-container {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.subscribe-block-icon-top {
+    width: 56px;
+    height: 56px;
+    background-color: #f0f7ff;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.subscribe-block-title {
+    color: #111827;
+    font-size: 32px;
+    font-weight: 800;
+    margin: 0 0 16px 0;
+}
+
+.subscribe-block-desc {
+    color: #6b7280;
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0 0 32px 0;
+    max-width: 480px;
+}
+
+.subscribe-block-form {
+    display: flex;
+    gap: 12px;
+    width: 100%;
+    max-width: 480px;
+}
+
+.subscribe-block-input {
+    flex-grow: 1;
+    padding: 14px 16px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 15px;
+    color: #111827;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.subscribe-block-input::placeholder {
+    color: #9ca3af;
+}
+
+.subscribe-block-input:focus {
+    border-color: #0b5ed7;
+    box-shadow: 0 0 0 3px rgba(11, 94, 215, 0.1);
+}
+
+.subscribe-block-btn {
+    background-color: #0b5ed7;
+    color: #ffffff;
+    border: none;
+    padding: 14px 24px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.2s ease;
+    white-space: nowrap;
+}
+
+.subscribe-block-btn:hover {
+    background-color: #094eb5;
+}
+
+.subscribe-block-img-icon {
+    width: 28px; /* Задаємо розмір іконки, як було у SVG */
+    height: 28px;
+    object-fit: contain; /* Запобігає розтягуванню чи спотворенню картинки */
+}
+
+/* =========================================
+   АДАПТИВНІСТЬ
+   ========================================= */
+
+@media (max-width: 576px) {
+    .subscribe-block-section {
+        padding: 60px 16px;
+    }
+
+    .subscribe-block-title {
+        font-size: 26px;
+    }
+
+    .subscribe-block-form {
+        flex-direction: column;
+    }
+
+    .subscribe-block-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* =========================================
+   АДАПТИВНІСТЬ (Медіа-запити)
+   ========================================= */
+
+@media (max-width: 992px) {
+    .news-page-grid-2 {
+        grid-template-columns: 1fr;
+    }
+    .news-page-grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .news-page-section {
+        padding: 40px 16px;
+    }
+
+    .news-page-filters {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding-bottom: 10px;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .news-page-filter {
+        white-space: nowrap;
+    }
+
+    .news-page-grid-3 {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .news-page-img-wrap.main-img {
+        height: 200px;
+    }
+}
